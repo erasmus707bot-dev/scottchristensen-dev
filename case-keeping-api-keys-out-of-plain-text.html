@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Keeping API keys out of plain text — case study</title>
-<meta name="description" content="[EDIT] One sentence: what Keeping API keys out of plain text is and the result.">
+<title>Keeping API keys out of plain text — Scott Christensen</title>
+<meta name="description" content="A security lab note: keeping AI provider keys in HashiCorp Vault with no plain-text fallback.">
 <meta name="color-scheme" content="light dark">
 <link rel="stylesheet" href="assets/site.css">
 <script src="assets/site.js"></script>
@@ -34,28 +34,23 @@
 <main id="main">
 <!-- block:cs-intro -->
 <section class="hero"><h1>Keeping API keys out of plain text</h1>
-<p class="pitch">[EDIT] One line: what it is and who it is for.</p>
+<p class="pitch">I made the safe path the easy one.</p>
 <p><a class="btn ghost" href="projects.html">← All projects</a></p></section>
 <!-- /block -->
 
-<!-- block:cs-problem -->
+<!-- block:cs-s1 -->
 <section><h2>The problem</h2>
-<p>[EDIT] What was going wrong, and for whom.</p></section>
+<p>My platform calls several AI providers, each with a paid API key. Keys in config files or scripts end up in backups, logs and git history.</p></section>
 <!-- /block -->
 
-<!-- block:cs-built -->
-<section><h2>What I built</h2>
-<p>[EDIT] What you made and how it works.</p></section>
+<!-- block:cs-s2 -->
+<section><h2>Approach</h2>
+<ul><li>All keys live in HashiCorp Vault. The apps read them from Vault at run time — there&#x27;s no plain-text fallback.</li><li>A settings screen lets me paste a new key, rotate it, or turn a provider on or off. Keys are never shown back on screen.</li><li>Vault unseals automatically at boot through a systemd service, so a reboot doesn&#x27;t take the platform down.</li><li>Project rule: credentials stay in Vault, never in plain text.</li></ul></section>
 <!-- /block -->
 
-<!-- block:cs-stack -->
-<section><h2>Stack</h2>
-<ul class="tags"><li>[EDIT]</li><li>[EDIT]</li><li>[EDIT]</li></ul></section>
-<!-- /block -->
-
-<!-- block:cs-result -->
-<section><h2>The result</h2>
-<p>[EDIT] What changed because of it.</p></section>
+<!-- block:cs-s3 -->
+<section><h2>Takeaway</h2>
+<p>Security that&#x27;s painful gets skipped.</p></section>
 <!-- /block -->
 </main>
 <footer><p>© <a href="index.html">Home</a></p><!-- hx:fsocial --><p><span class="social" aria-label="Profiles"><a href="https://github.com/erasmus707bot-dev" rel="me noopener">GitHub</a></span></p><!-- /hx:fsocial -->
