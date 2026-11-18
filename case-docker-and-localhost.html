@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Docker and localhost — case study</title>
-<meta name="description" content="[EDIT] One sentence: what Docker and localhost is and the result.">
+<title>Why my service couldn&#x27;t see “localhost” inside Docker — Scott Christensen</title>
+<meta name="description" content="A Docker lab note: why a localhost check always failed inside a container, and the fix.">
 <meta name="color-scheme" content="light dark">
 <link rel="stylesheet" href="assets/site.css">
 <script src="assets/site.js"></script>
@@ -33,29 +33,29 @@
 <button type="button" class="theme" data-theme-toggle aria-label="Switch light or dark">🌓</button></header>
 <main id="main">
 <!-- block:cs-intro -->
-<section class="hero"><h1>Docker and localhost</h1>
-<p class="pitch">[EDIT] One line: what it is and who it is for.</p>
+<section class="hero"><h1>Why my service couldn&#x27;t see “localhost” inside Docker</h1>
+<p class="pitch">Containers change what “local” means.</p>
 <p><a class="btn ghost" href="projects.html">← All projects</a></p></section>
 <!-- /block -->
 
-<!-- block:cs-problem -->
+<!-- block:cs-s1 -->
 <section><h2>The problem</h2>
-<p>[EDIT] What was going wrong, and for whom.</p></section>
+<p>An image service needed to recognize the server&#x27;s owner when a request came from the same machine. Inside Docker, that check always failed.</p></section>
 <!-- /block -->
 
-<!-- block:cs-built -->
-<section><h2>What I built</h2>
-<p>[EDIT] What you made and how it works.</p></section>
+<!-- block:cs-s2 -->
+<section><h2>What I found</h2>
+<p>Docker&#x27;s port forwarding hands the container the bridge gateway address, not 127.0.0.1. From inside the container, no request ever looks local.</p></section>
 <!-- /block -->
 
-<!-- block:cs-stack -->
-<section><h2>Stack</h2>
-<ul class="tags"><li>[EDIT]</li><li>[EDIT]</li><li>[EDIT]</li></ul></section>
+<!-- block:cs-s3 -->
+<section><h2>The fix</h2>
+<ul><li>Moved the service off Docker onto a host systemd service that starts on boot — its dependencies were light, so the container wasn&#x27;t buying much.</li><li>Kept a second sign-in path, a signed token, that works the same locally or remotely.</li><li>Disabled the old container entry so it couldn&#x27;t be recreated by accident.</li></ul></section>
 <!-- /block -->
 
-<!-- block:cs-result -->
-<section><h2>The result</h2>
-<p>[EDIT] What changed because of it.</p></section>
+<!-- block:cs-s4 -->
+<section><h2>Takeaway</h2>
+<p>Know what the network looks like from inside before trusting an address check.</p></section>
 <!-- /block -->
 </main>
 <footer><p>© <a href="index.html">Home</a></p><!-- hx:fsocial --><p><span class="social" aria-label="Profiles"><a href="https://github.com/erasmus707bot-dev" rel="me noopener">GitHub</a></span></p><!-- /hx:fsocial -->
