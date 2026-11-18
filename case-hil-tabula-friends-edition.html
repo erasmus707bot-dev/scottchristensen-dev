@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>HIL + Tabula Friends Edition — case study</title>
-<meta name="description" content="[EDIT] One sentence: what HIL + Tabula Friends Edition is and the result.">
+<title>HIL + Tabula Friends Edition — Scott Christensen</title>
+<meta name="description" content="HIL + Tabula Friends Edition: offline desktop apps with Windows and Linux installers, tested in a VM before release.">
 <meta name="color-scheme" content="light dark">
 <link rel="stylesheet" href="assets/site.css">
 <script src="assets/site.js"></script>
@@ -34,28 +34,28 @@
 <main id="main">
 <!-- block:cs-intro -->
 <section class="hero"><h1>HIL + Tabula Friends Edition</h1>
-<p class="pitch">[EDIT] One line: what it is and who it is for.</p>
+<p class="pitch">Two small offline desktop apps I package for friends on Windows and Linux.</p>
+<p class="m">Built with Claude under my direction · Python, Windows installer, Debian packaging, ffmpeg</p>
 <p><a class="btn ghost" href="projects.html">← All projects</a></p></section>
 <!-- /block -->
 
-<!-- block:cs-problem -->
-<section><h2>The problem</h2>
-<p>[EDIT] What was going wrong, and for whom.</p></section>
+<!-- block:cs-diagram -->
+<section><figure><img src="assets/img/friends-diagram.webp" width="1020" height="1085" loading="lazy" alt="Diagram: a Windows installer and a Linux package; version 1.0.0 showed nothing on Windows, so every Windows build is now tested in a Windows virtual machine first."></figure></section>
 <!-- /block -->
 
-<!-- block:cs-built -->
-<section><h2>What I built</h2>
-<p>[EDIT] What you made and how it works.</p></section>
+<!-- block:cs-s1 -->
+<section><h2>What it does</h2>
+<ul><li>HIL — a toolbar for screenshots and screen recordings.</li><li>Tabula — a notepad with a tab per project, to-dos and pictures.</li><li>Everything stays on the user&#x27;s computer — no internet needed.</li></ul></section>
 <!-- /block -->
 
-<!-- block:cs-stack -->
-<section><h2>Stack</h2>
-<ul class="tags"><li>[EDIT]</li><li>[EDIT]</li><li>[EDIT]</li></ul></section>
+<!-- block:cs-s2 -->
+<section><h2>A real problem it solved</h2>
+<p>Version 1.0.0 installed on Windows and showed nothing — no window, no error. I made it a standing rule: every Windows build is tested in a Windows virtual machine before it reaches a real PC. Version 1.0.1 passed the VM test, with both apps launching, and shipped.</p></section>
 <!-- /block -->
 
-<!-- block:cs-result -->
-<section><h2>The result</h2>
-<p>[EDIT] What changed because of it.</p></section>
+<!-- block:cs-s3 -->
+<section><h2>For non-technical users</h2>
+<p>A plain-English install guide: what the Windows “protected your PC” warning means, where screenshots and videos are saved, and how to send a picture into a note. The Windows installer needs no admin password, and ffmpeg is included so recording works out of the box.</p></section>
 <!-- /block -->
 </main>
 <footer><p>© <a href="index.html">Home</a></p><!-- hx:fsocial --><p><span class="social" aria-label="Profiles"><a href="https://github.com/erasmus707bot-dev" rel="me noopener">GitHub</a></span></p><!-- /hx:fsocial -->
