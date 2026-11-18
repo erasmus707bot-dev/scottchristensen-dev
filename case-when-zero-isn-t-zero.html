@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>When zero isn&#x27;t zero — case study</title>
-<meta name="description" content="[EDIT] One sentence: what When zero isn&#x27;t zero is and the result.">
+<title>When zero isn&#x27;t zero — case study — Scott Christensen</title>
+<meta name="description" content="False high-risk alerts came from failed price reads counted as zero. A retry, a last-good-value guard and 12 new tests.">
 <meta name="color-scheme" content="light dark">
 <link rel="stylesheet" href="assets/site.css">
 <script src="assets/site.js"></script>
@@ -34,28 +34,39 @@
 <main id="main">
 <!-- block:cs-intro -->
 <section class="hero"><h1>When zero isn&#x27;t zero</h1>
-<p class="pitch">[EDIT] One line: what it is and who it is for.</p>
+<p class="pitch">Stopping false high-risk alerts so the real ones get noticed.</p>
+<p><strong>Project:</strong> Automated trading system (personal) · built with Claude under my direction</p>
 <p><a class="btn ghost" href="projects.html">← All projects</a></p></section>
 <!-- /block -->
 
-<!-- block:cs-problem -->
+<!-- block:cs-s1 -->
 <section><h2>The problem</h2>
-<p>[EDIT] What was going wrong, and for whom.</p></section>
+<p>The system kept raising high-risk alerts that weren&#x27;t real. Alerts nobody trusts get ignored — which is how real problems get missed.</p></section>
 <!-- /block -->
 
-<!-- block:cs-built -->
-<section><h2>What I built</h2>
-<p>[EDIT] What you made and how it works.</p></section>
+<!-- block:cs-s2 -->
+<section><h2>What I found</h2>
+<p>When a price lookup failed, the failed read was being counted as a price of zero. A position “worth zero” looks like a disaster, so the alert fired.</p></section>
 <!-- /block -->
 
-<!-- block:cs-stack -->
-<section><h2>Stack</h2>
-<ul class="tags"><li>[EDIT]</li><li>[EDIT]</li><li>[EDIT]</li></ul></section>
+<!-- block:cs-s3 -->
+<section><h2>The fix</h2>
+<ul><li>Added a retry for failed price reads.</li><li>Added a last-good-value guard: if a read still fails, use the last real price instead of zero.</li><li>Backed the change with 12 new tests.</li></ul></section>
 <!-- /block -->
 
-<!-- block:cs-result -->
-<section><h2>The result</h2>
-<p>[EDIT] What changed because of it.</p></section>
+<!-- block:cs-s4 -->
+<section><h2>Two more like it</h2>
+<ul><li>A control panel showed safety switches as OFF while they were running. I had the display corrected so the screen matches what the system does.</li><li>After an upgrade, one monitoring alert could never turn red. I found what it was comparing against and fixed it.</li></ul></section>
+<!-- /block -->
+
+<!-- block:cs-s5 -->
+<section><h2>How the system is run</h2>
+<p>It started with a 10-day paper-trading trial before going live at one-tenth size, with daily caps, kill switches and shadow-first rollouts (new behavior is watched before it&#x27;s allowed to act).</p></section>
+<!-- /block -->
+
+<!-- block:cs-s6 -->
+<section><h2>Takeaway</h2>
+<p>Monitoring is only useful if the screen tells the truth — in both directions.</p></section>
 <!-- /block -->
 </main>
 <footer><p>© <a href="index.html">Home</a></p><!-- hx:fsocial --><p><span class="social" aria-label="Profiles"><a href="https://github.com/erasmus707bot-dev" rel="me noopener">GitHub</a></span></p><!-- /hx:fsocial -->
