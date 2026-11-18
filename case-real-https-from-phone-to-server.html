@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Real HTTPS from phone to server — case study</title>
-<meta name="description" content="[EDIT] One sentence: what Real HTTPS from phone to server is and the result.">
+<title>Ending “cleartext not permitted” — real HTTPS from phone to home server — Scott Christensen</title>
+<meta name="description" content="A networking lab note: moving a phone app from plain HTTP and a baked-in IP to HTTPS on a private network.">
 <meta name="color-scheme" content="light dark">
 <link rel="stylesheet" href="assets/site.css">
 <script src="assets/site.js"></script>
@@ -33,29 +33,29 @@
 <button type="button" class="theme" data-theme-toggle aria-label="Switch light or dark">🌓</button></header>
 <main id="main">
 <!-- block:cs-intro -->
-<section class="hero"><h1>Real HTTPS from phone to server</h1>
-<p class="pitch">[EDIT] One line: what it is and who it is for.</p>
+<section class="hero"><h1>Ending “cleartext not permitted” — real HTTPS from phone to home server</h1>
+<p class="pitch">One design change ended a whole family of connection errors.</p>
 <p><a class="btn ghost" href="projects.html">← All projects</a></p></section>
 <!-- /block -->
 
-<!-- block:cs-problem -->
+<!-- block:cs-s1 -->
 <section><h2>The problem</h2>
-<p>[EDIT] What was going wrong, and for whom.</p></section>
+<p>My phone companion app kept losing its link to my home server: “cleartext not permitted,” “no pairing data.” The app used plain HTTP and had the server&#x27;s IP address baked in. Android blocks plain HTTP by default, and every address change meant a rebuild.</p></section>
 <!-- /block -->
 
-<!-- block:cs-built -->
-<section><h2>What I built</h2>
-<p>[EDIT] What you made and how it works.</p></section>
+<!-- block:cs-s2 -->
+<section><h2>The fix</h2>
+<ul><li>Put each local service behind HTTPS on my private network (Tailscale), with a real certificate for the server&#x27;s private name.</li><li>Android always allows HTTPS, so there are no special rules, no IP baked into the app, and no rebuild when addresses change.</li><li>Added a watchdog that health-checks the local services behind the HTTPS front, and set the services to start on boot.</li></ul></section>
 <!-- /block -->
 
-<!-- block:cs-stack -->
-<section><h2>Stack</h2>
-<ul class="tags"><li>[EDIT]</li><li>[EDIT]</li><li>[EDIT]</li></ul></section>
+<!-- block:cs-s3 -->
+<section><h2>Testing lesson</h2>
+<p>The certificate belongs to the name, not the IP. Testing by IP fails with a hostname mismatch even when everything is healthy. The right test pins the name to the IP so the certificate is still checked.</p></section>
 <!-- /block -->
 
-<!-- block:cs-result -->
-<section><h2>The result</h2>
-<p>[EDIT] What changed because of it.</p></section>
+<!-- block:cs-s4 -->
+<section><h2>Takeaway</h2>
+<p>Fix the design, not the symptom.</p></section>
 <!-- /block -->
 </main>
 <footer><p>© <a href="index.html">Home</a></p><!-- hx:fsocial --><p><span class="social" aria-label="Profiles"><a href="https://github.com/erasmus707bot-dev" rel="me noopener">GitHub</a></span></p><!-- /hx:fsocial -->
