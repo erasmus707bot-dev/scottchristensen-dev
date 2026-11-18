@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>The server that couldn&#x27;t find itself — case study</title>
-<meta name="description" content="[EDIT] One sentence: what The server that couldn&#x27;t find itself is and the result.">
+<title>The server that couldn&#x27;t find itself — a DNS trap — Scott Christensen</title>
+<meta name="description" content="A DNS lab note: a server that couldn&#x27;t resolve its own private-network name, and the safe fix.">
 <meta name="color-scheme" content="light dark">
 <link rel="stylesheet" href="assets/site.css">
 <script src="assets/site.js"></script>
@@ -33,29 +33,29 @@
 <button type="button" class="theme" data-theme-toggle aria-label="Switch light or dark">🌓</button></header>
 <main id="main">
 <!-- block:cs-intro -->
-<section class="hero"><h1>The server that couldn&#x27;t find itself</h1>
-<p class="pitch">[EDIT] One line: what it is and who it is for.</p>
+<section class="hero"><h1>The server that couldn&#x27;t find itself — a DNS trap</h1>
+<p class="pitch">Before you undo something odd, find out why it&#x27;s there.</p>
 <p><a class="btn ghost" href="projects.html">← All projects</a></p></section>
 <!-- /block -->
 
-<!-- block:cs-problem -->
+<!-- block:cs-s1 -->
 <section><h2>The problem</h2>
-<p>[EDIT] What was going wrong, and for whom.</p></section>
+<p>From the server, every request to its own private-network name failed (curl exit 6: couldn&#x27;t resolve host). It looked like the phone link was down. It wasn&#x27;t — the phone connected fine.</p></section>
 <!-- /block -->
 
-<!-- block:cs-built -->
-<section><h2>What I built</h2>
-<p>[EDIT] What you made and how it works.</p></section>
+<!-- block:cs-s2 -->
+<section><h2>What I found</h2>
+<p>Months earlier, a VPN had broken name resolution, so the server&#x27;s resolver file had been set by hand to public DNS servers only. Those servers don&#x27;t know private-network names. The phone wasn&#x27;t affected because it resolves names through its own private-network client.</p></section>
 <!-- /block -->
 
-<!-- block:cs-stack -->
-<section><h2>Stack</h2>
-<ul class="tags"><li>[EDIT]</li><li>[EDIT]</li><li>[EDIT]</li></ul></section>
+<!-- block:cs-s3 -->
+<section><h2>The tempting fix — and why I didn&#x27;t take it</h2>
+<p>Pointing the resolver back at the system default would have “fixed” it and quietly undone the VPN workaround. The safe fix is adding the private network&#x27;s resolver at the top of the hand-managed file. I documented the trap so nobody loses another session to it.</p></section>
 <!-- /block -->
 
-<!-- block:cs-result -->
-<section><h2>The result</h2>
-<p>[EDIT] What changed because of it.</p></section>
+<!-- block:cs-s4 -->
+<section><h2>Takeaway</h2>
+<p>Before you undo something odd, find out why it&#x27;s there.</p></section>
 <!-- /block -->
 </main>
 <footer><p>© <a href="index.html">Home</a></p><!-- hx:fsocial --><p><span class="social" aria-label="Profiles"><a href="https://github.com/erasmus707bot-dev" rel="me noopener">GitHub</a></span></p><!-- /hx:fsocial -->
