@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Zero results, no error — case study</title>
-<meta name="description" content="[EDIT] One sentence: what Zero results, no error is and the result.">
+<title>Zero results, no error — case study — Scott Christensen</title>
+<meta name="description" content="A scanner showed zero results with no error on a live phone test. A duplicated function name; 81 results after the fix.">
 <meta name="color-scheme" content="light dark">
 <link rel="stylesheet" href="assets/site.css">
 <script src="assets/site.js"></script>
@@ -34,28 +34,34 @@
 <main id="main">
 <!-- block:cs-intro -->
 <section class="hero"><h1>Zero results, no error</h1>
-<p class="pitch">[EDIT] One line: what it is and who it is for.</p>
+<p class="pitch">A silent failure caught during a live phone test — plus more triage from the same project.</p>
+<p><strong>Project:</strong> Hermes · built with Claude under my direction</p>
 <p><a class="btn ghost" href="projects.html">← All projects</a></p></section>
 <!-- /block -->
 
-<!-- block:cs-problem -->
+<!-- block:cs-s1 -->
 <section><h2>The problem</h2>
-<p>[EDIT] What was going wrong, and for whom.</p></section>
+<p>During a live test on my phone, a scanner showed zero results. No error, no warning — it just looked empty.</p></section>
 <!-- /block -->
 
-<!-- block:cs-built -->
-<section><h2>What I built</h2>
-<p>[EDIT] What you made and how it works.</p></section>
+<!-- block:cs-s2 -->
+<section><h2>What I found</h2>
+<p>Two functions had the same name. The second one quietly replaced the first, so the scanner ran the wrong code and returned nothing.</p></section>
 <!-- /block -->
 
-<!-- block:cs-stack -->
-<section><h2>Stack</h2>
-<ul class="tags"><li>[EDIT]</li><li>[EDIT]</li><li>[EDIT]</li></ul></section>
+<!-- block:cs-s3 -->
+<section><h2>The fix</h2>
+<p>Removed the duplicate and re-ran the scan: 81 results, confirmed on the phone.</p></section>
 <!-- /block -->
 
-<!-- block:cs-result -->
-<section><h2>The result</h2>
-<p>[EDIT] What changed because of it.</p></section>
+<!-- block:cs-s4 -->
+<section><h2>More triage from the same project</h2>
+<ul><li>17 security-scan alerts: reviewed every one, confirmed all were harmless test data, and kept the check at full strength instead of weakening it.</li><li>“It loads and nothing happens”: the tool worked but gave no feedback. Added visible results and per-source counts.</li><li>5 failing tests: fixed 4, confirmed 2 were intended changes before updating them, and found a real access bug — partners couldn&#x27;t load scripts their pages needed.</li><li>Image finder: wrong matches went from 13 of 15 to 0 of 30 after I found it was mistaking wiki pages for image files.</li></ul></section>
+<!-- /block -->
+
+<!-- block:cs-s5 -->
+<section><h2>Takeaway</h2>
+<p>“No error” isn&#x27;t the same as “working.” I test on the real device, the way the user will.</p></section>
 <!-- /block -->
 </main>
 <footer><p>© <a href="index.html">Home</a></p><!-- hx:fsocial --><p><span class="social" aria-label="Profiles"><a href="https://github.com/erasmus707bot-dev" rel="me noopener">GitHub</a></span></p><!-- /hx:fsocial -->
