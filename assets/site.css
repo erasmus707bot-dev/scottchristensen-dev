@@ -1,6 +1,8 @@
 /* Scott's standard palette: warm cream light / deep navy dark, 17pt+ body, muted accents */
 :root{--bg:#f5f2ec;--panel:#fffdf8;--text:#1f2a37;--muted:#4b5563;--line:#d9d2c3;--accent:#8a6a1f;--accent-ink:#fff;--callout:#e6eef5;color-scheme:light}
 [data-theme="dark"]{--bg:#0d1520;--panel:#14202e;--text:#e8dfc8;--muted:#b9b09a;--line:#2b3a4c;--accent:#c9a54a;--accent-ink:#0d1520;--callout:#1b2a3a;color-scheme:dark}
+/* No-JS fallback: follow the device setting unless the page says otherwise */
+@media (prefers-color-scheme: dark){:root:not([data-theme]){--bg:#0d1520;--panel:#14202e;--text:#e8dfc8;--muted:#b9b09a;--line:#2b3a4c;--accent:#c9a54a;--accent-ink:#0d1520;--callout:#1b2a3a;color-scheme:dark}}
 *{box-sizing:border-box}
 html{font-size:17pt;line-height:1.55}
 body{margin:0;background:var(--bg);color:var(--text);font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
