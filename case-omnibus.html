@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Omnibus — case study</title>
-<meta name="description" content="[EDIT] One sentence: what Omnibus is and the result.">
+<title>Omnibus — Scott Christensen</title>
+<meta name="description" content="Omnibus: an Android audiobook player with its own sync server, read-along text and spoiler-safe story help.">
 <meta name="color-scheme" content="light dark">
 <link rel="stylesheet" href="assets/site.css">
 <script src="assets/site.js"></script>
@@ -34,28 +34,33 @@
 <main id="main">
 <!-- block:cs-intro -->
 <section class="hero"><h1>Omnibus</h1>
-<p class="pitch">[EDIT] One line: what it is and who it is for.</p>
+<p class="pitch">An Android audiobook player that syncs my library, place and history through my own home server — no cloud account.</p>
+<p class="m">Built with Claude under my direction · Kotlin, Python, SQLite, systemd, Ollama</p>
 <p><a class="btn ghost" href="projects.html">← All projects</a></p></section>
 <!-- /block -->
 
-<!-- block:cs-problem -->
-<section><h2>The problem</h2>
-<p>[EDIT] What was going wrong, and for whom.</p></section>
+<!-- block:cs-diagram -->
+<section><figure><img src="assets/img/omnibus-diagram.webp" width="1020" height="1103" loading="lazy" alt="Diagram: the phone app syncs with a Python and SQLite server over a private network; overnight the server transcribes books and prepares answers ahead."></figure></section>
 <!-- /block -->
 
-<!-- block:cs-built -->
-<section><h2>What I built</h2>
-<p>[EDIT] What you made and how it works.</p></section>
+<!-- block:cs-s1 -->
+<section><h2>Features that matter</h2>
+<ul><li>Player: per-book speed and voice EQ presets, sleep timer, smart rewind, bookmarks, Android Auto, home-screen widget.</li><li>Library: sort by author, title or date added; full series support with reading order and gaps.</li><li>Library health: checks every book on import for missing, corrupt or short files; finds duplicates and keeps the better copy; deleted books sit in a 30-day trash first.</li><li>Read-along and Story help: the server transcribes books overnight, and the phone can answer “what did I miss?” and “who&#x27;s who?” — without spoilers past my spot.</li><li>Sync server: private-network only, a separate token for each device, nightly backups kept for 14 days.</li></ul></section>
 <!-- /block -->
 
-<!-- block:cs-stack -->
-<section><h2>Stack</h2>
-<ul class="tags"><li>[EDIT]</li><li>[EDIT]</li><li>[EDIT]</li></ul></section>
+<!-- block:cs-s2 -->
+<section><h2>A real problem it solved</h2>
+<p>Read-aloud and transcripts mangled the character names in a translated novel. I chose a per-book name list that fixes both the text and how names are spoken — 904 lines corrected in one pass.</p></section>
 <!-- /block -->
 
-<!-- block:cs-result -->
-<section><h2>The result</h2>
-<p>[EDIT] What changed because of it.</p></section>
+<!-- block:cs-s3 -->
+<section><h2>Built to feel fast</h2>
+<p>Story help answers for my most-listened books are prepared ahead by a systemd timer every 3 hours, so the phone gets them with zero AI calls at the moment I ask. Uploads resume after a dropped connection and never repeat work.</p></section>
+<!-- /block -->
+
+<!-- block:cs-s4 -->
+<section><h2>Testing</h2>
+<ul><li>Phone core tests: 133 of 133 passing.</li><li>Every version is confirmed on my real phone before I sign it off.</li></ul></section>
 <!-- /block -->
 </main>
 <footer><p>© <a href="index.html">Home</a></p><!-- hx:fsocial --><p><span class="social" aria-label="Profiles"><a href="https://github.com/erasmus707bot-dev" rel="me noopener">GitHub</a></span></p><!-- /hx:fsocial -->
