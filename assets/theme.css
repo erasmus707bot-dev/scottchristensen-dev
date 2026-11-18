@@ -1,0 +1,5 @@
+/* hx common — managed by Website Studio */
+.social{display:inline-flex;gap:.9rem;align-items:center;flex-wrap:wrap}
+.social a{min-height:44px;display:inline-flex;align-items:center;padding:0 .2rem}
+.updated{margin:.2rem 0;color:var(--muted);font-size:1rem}
+/* Classic — cream & gold (the starter's own look). Overrides nothing; site.css carries it. */
