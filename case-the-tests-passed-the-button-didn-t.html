@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>The tests passed. The button didn&#x27;t. — case study</title>
-<meta name="description" content="[EDIT] One sentence: what The tests passed. The button didn&#x27;t. is and the result.">
+<title>The tests passed. The button didn&#x27;t. — case study — Scott Christensen</title>
+<meta name="description" content="Every automated test passed, but the Add image button did nothing. A nested form, found by a real click-through.">
 <meta name="color-scheme" content="light dark">
 <link rel="stylesheet" href="assets/site.css">
 <script src="assets/site.js"></script>
@@ -34,28 +34,29 @@
 <main id="main">
 <!-- block:cs-intro -->
 <section class="hero"><h1>The tests passed. The button didn&#x27;t.</h1>
-<p class="pitch">[EDIT] One line: what it is and who it is for.</p>
+<p class="pitch">Why I click through every change by hand after the automated tests go green.</p>
+<p><strong>Project:</strong> SonoVault · built with Claude under my direction</p>
 <p><a class="btn ghost" href="projects.html">← All projects</a></p></section>
 <!-- /block -->
 
-<!-- block:cs-problem -->
+<!-- block:cs-s1 -->
 <section><h2>The problem</h2>
-<p>[EDIT] What was going wrong, and for whom.</p></section>
+<p>Every automated test was green. But when I clicked Add image in a live walk-through, nothing happened — no error, no image, no message.</p></section>
 <!-- /block -->
 
-<!-- block:cs-built -->
-<section><h2>What I built</h2>
-<p>[EDIT] What you made and how it works.</p></section>
+<!-- block:cs-s2 -->
+<section><h2>What I found</h2>
+<p>The button sat inside a form that was nested inside another form. Browsers don&#x27;t allow that, so the click went nowhere. The automated tests never clicked through the page the way a person does.</p></section>
 <!-- /block -->
 
-<!-- block:cs-stack -->
-<section><h2>Stack</h2>
-<ul class="tags"><li>[EDIT]</li><li>[EDIT]</li><li>[EDIT]</li></ul></section>
+<!-- block:cs-s3 -->
+<section><h2>The fix</h2>
+<ul><li>Fixed the page structure so the button submits the right form.</li><li>Added a guard test so the same mistake fails the build next time.</li></ul></section>
 <!-- /block -->
 
-<!-- block:cs-result -->
-<section><h2>The result</h2>
-<p>[EDIT] What changed because of it.</p></section>
+<!-- block:cs-s4 -->
+<section><h2>Takeaway</h2>
+<p>Automated tests prove the code does what it was told. A real click-through proves it does what people need. I do both before I call something done.</p></section>
 <!-- /block -->
 </main>
 <footer><p>© <a href="index.html">Home</a></p><!-- hx:fsocial --><p><span class="social" aria-label="Profiles"><a href="https://github.com/erasmus707bot-dev" rel="me noopener">GitHub</a></span></p><!-- /hx:fsocial -->
