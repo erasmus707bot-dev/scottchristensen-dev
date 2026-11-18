@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>The green health check that lied — case study</title>
-<meta name="description" content="[EDIT] One sentence: what The green health check that lied is and the result.">
+<title>The green health check that lied — case study — Scott Christensen</title>
+<meta name="description" content="SonoVault went down while its health check stayed green. How I traced it, fixed it and added two guards.">
 <meta name="color-scheme" content="light dark">
 <link rel="stylesheet" href="assets/site.css">
 <script src="assets/site.js"></script>
@@ -34,28 +34,34 @@
 <main id="main">
 <!-- block:cs-intro -->
 <section class="hero"><h1>The green health check that lied</h1>
-<p class="pitch">[EDIT] One line: what it is and who it is for.</p>
+<p class="pitch">A live outage the monitoring missed — and the backup test that couldn&#x27;t fail.</p>
+<p><strong>Project:</strong> SonoVault · built with Claude under my direction</p>
 <p><a class="btn ghost" href="projects.html">← All projects</a></p></section>
 <!-- /block -->
 
-<!-- block:cs-problem -->
+<!-- block:cs-s1 -->
 <section><h2>The problem</h2>
-<p>[EDIT] What was going wrong, and for whom.</p></section>
+<p>The live study site went down, but the health check stayed green. Monitoring said everything was fine.</p></section>
 <!-- /block -->
 
-<!-- block:cs-built -->
-<section><h2>What I built</h2>
-<p>[EDIT] What you made and how it works.</p></section>
+<!-- block:cs-s2 -->
+<section><h2>What I found</h2>
+<p>A test build had been written into the production folder. The health check only asked “is the service running?” — not “is the right build being served?” So it kept passing while users got a broken site.</p></section>
 <!-- /block -->
 
-<!-- block:cs-stack -->
-<section><h2>Stack</h2>
-<ul class="tags"><li>[EDIT]</li><li>[EDIT]</li><li>[EDIT]</li></ul></section>
+<!-- block:cs-s3 -->
+<section><h2>The fix</h2>
+<ul><li>Restored service.</li><li>Test builds now go to their own folders, never production.</li><li>The health check now verifies the build itself, not just that the process is up.</li></ul></section>
 <!-- /block -->
 
-<!-- block:cs-result -->
-<section><h2>The result</h2>
-<p>[EDIT] What changed because of it.</p></section>
+<!-- block:cs-s4 -->
+<section><h2>Follow-up: the backup test that couldn&#x27;t fail</h2>
+<p>While checking recovery, I found the backup restore test could pass with every course image missing — it only counted database rows. I had it rebuilt to check every stored file&#x27;s existence and size, and to restore from the off-site copy.</p></section>
+<!-- /block -->
+
+<!-- block:cs-s5 -->
+<section><h2>Takeaway</h2>
+<p>A check that can&#x27;t fail isn&#x27;t a check. I test the tests.</p></section>
 <!-- /block -->
 </main>
 <footer><p>© <a href="index.html">Home</a></p><!-- hx:fsocial --><p><span class="social" aria-label="Profiles"><a href="https://github.com/erasmus707bot-dev" rel="me noopener">GitHub</a></span></p><!-- /hx:fsocial -->
