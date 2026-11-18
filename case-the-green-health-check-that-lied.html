@@ -39,6 +39,16 @@
 <p><a class="btn ghost" href="projects.html">← All projects</a></p></section>
 <!-- /block -->
 
+<!-- block:cs-video -->
+<section><figure>
+<video controls playsinline preload="none" width="1080" height="1080" poster="assets/img/cs01-poster.webp" aria-label="Silent explainer video, 33 seconds">
+<source src="assets/video/cs01-explainer.mp4" type="video/mp4">
+<a href="assets/video/cs01-explainer.mp4">Watch the explainer video (MP4)</a>
+</video>
+<figcaption>33-second silent explainer — the same story as the text below.</figcaption>
+</figure></section>
+<!-- /block -->
+
 <!-- block:cs-s1 -->
 <section><h2>The problem</h2>
 <p>The live study site went down, but the health check stayed green. Monitoring said everything was fine.</p></section>
@@ -46,7 +56,7 @@
 
 <!-- block:cs-s2 -->
 <section><h2>What I found</h2>
-<p>A test build had been written into the production folder. The health check only asked “is the service running?” — not “is the right build being served?” So it kept passing while users got a broken site.</p></section>
+<p>A test build had been written into the production folder. The health check only asked “is the service running?” — not “is the right build being served?” So it kept passing while users got a broken site.</p><figure><img src="assets/img/cs01-diagram.webp" width="1080" height="1080" loading="lazy" alt="The check asked if the service was running, never if the right build was served."></figure></section>
 <!-- /block -->
 
 <!-- block:cs-s3 -->
