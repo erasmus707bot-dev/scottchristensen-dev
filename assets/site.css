@@ -36,3 +36,7 @@ footer{max-width:62rem;margin:0 auto;padding:1.5rem 1rem;color:var(--muted)}
 .jump a{display:inline-flex;align-items:center;min-height:44px;padding:0 .9rem;border:1px solid var(--line);border-radius:999px;background:var(--panel);color:var(--text);text-decoration:none}
 .links{padding-left:1.1rem}.links li{margin:.45rem 0}.links span{color:var(--muted)}
 section[id]{scroll-margin-top:4.5rem}
+/* part 2: phone previews shorter; folded card details */
+@media (max-width:40rem){.card>img,.card figure img{max-height:7.5rem}}
+.card details{margin:.3rem 0;border-top:1px solid var(--line)}
+.card summary{cursor:pointer;min-height:44px;display:flex;align-items:center;color:var(--accent);font-weight:600}
