@@ -41,26 +41,26 @@
 <figure><img src="assets/img/hermes-linux-studio-build-test.webp" width="1000" height="643" loading="lazy" alt="Hermes Linux App Studio: a build passed — it wrote the code, compiled it, ran its tests and pressed every control."><figcaption>Hermes Linux App Studio — build &amp; test passed: design checked, code written, compiled, tests run, every control pressed.</figcaption></figure>
 
 <p><strong>What it does:</strong> A self-hosted platform of AI-assisted tools — website, image and app-building studios, a phone companion app and a job-search hub — running on my own Linux server. Built with Claude under my direction. I directed 2,709 version-controlled changes since Jul 2026, each stage closed with a written handoff (403 so far) and backed by 199 automated test files.</p>
-<p><strong>Stack:</strong> Python, JavaScript, Linux Mint, systemd, Docker, git, HashiCorp Vault, a private network, Android (Capacitor).</p>
+<details><summary>Stack</summary><p>Python, JavaScript, Linux Mint, systemd, Docker, git, HashiCorp Vault, a private network, Android (Capacitor).</p></details>
 <p><strong>A real problem it solved:</strong> A scanner silently showed zero results during a live phone test. I traced it to a duplicated function name and confirmed 81 results after the fix.</p><p><strong>Built on Hermes:</strong> <a href="case-iris.html">Iris</a> · <a href="case-hil-tabula-friends-edition.html">HIL + Tabula</a> · <a href="case-epochron.html">Epochron</a> · <a href="case-omnibus.html">Omnibus</a> · <a href="case-app-ladder.html">App Ladder</a></p>
 </article>
 <article class="card"><h3>ProReady</h3>
 <figure><img src="assets/img/proready-diagram.webp" width="1020" height="1283" loading="lazy" alt="Diagram: the ProReady CompTIA A+ course — 9 exam domains of captioned video lessons, 28 diagrams and 24 games, Next up picks the next step, spaced-repetition review, then two timed 90-question mock exams."></figure>
 <p><strong>What it does:</strong> A study platform for certification exams (formerly SonoVault): multi-subject course packs, spaced-repetition review (FSRS), an instructor review queue and encrypted content storage. Built with Claude under my direction.</p>
 <p><strong>Inside it:</strong> a full CompTIA A+ course — all 9 exam domains, two timed 90-question mock exams, 28 diagrams and 24 study games.</p>
-<p><strong>Stack:</strong> Next.js, TypeScript, PostgreSQL, Prisma, systemd, git.</p>
+<details><summary>Stack</summary><p>Next.js, TypeScript, PostgreSQL, Prisma, systemd, git.</p></details>
 <p><strong>A real problem it solved:</strong> I traced a live outage to a test build written into the production folder while the health check stayed green, restored service, and approved two guards: separate test-build folders and a health check that verifies the build. I also found the backup restore test could pass with every course image missing, and rebuilt it to check every stored file and restore from the off-site copy.</p>
 <p><a class="btn ghost" href="case-proready.html">ProReady and the A+ course →</a></p></article>
 <article class="card"><h3>Home server</h3>
 <figure><img src="assets/img/homeserver-diagram.webp" width="1020" height="1316" loading="lazy" alt="Diagram: my phone reaches the server over HTTPS on a private network; services run under systemd, secrets in HashiCorp Vault, plus Docker, Ollama and Paperless-ngx."></figure>
 <p><strong>What it does:</strong> A Linux Mint server that runs my apps, Docker services, local AI models and document archiving. Services start on boot under systemd, secrets live in HashiCorp Vault, and my phone reaches it over HTTPS on a private network.</p>
-<p><strong>Stack:</strong> Linux Mint, systemd, Docker, HashiCorp Vault, a private network, Ollama, Paperless-ngx.</p>
+<details><summary>Stack</summary><p>Linux Mint, systemd, Docker, HashiCorp Vault, a private network, Ollama, Paperless-ngx.</p></details>
 <p><strong>A real problem it solved:</strong> Restarts kept failing with “unit not found” and “start request repeated too quickly.” I found services split across systemd's system and user managers plus a stray process holding a port — fixed both and documented which service lives where.</p>
 <p><strong>Lab notes:</strong> <a href="case-unit-not-found.html">systemd</a> · <a href="case-real-https-from-phone-to-server.html">HTTPS to my phone</a> · <a href="case-docker-and-localhost.html">Docker and localhost</a> · <a href="case-keeping-api-keys-out-of-plain-text.html">Secrets</a> · <a href="case-the-server-that-couldn-t-find-itself.html">DNS trap</a> · <a href="case-works-on-my-machine.html">Works on my machine</a></p>
 </article>
 <article class="card"><h3>Automated trading system (personal)</h3>
 <p><strong>What it does:</strong> A self-hosted system that monitors and manages my brokerage and crypto accounts, with daily caps, kill switches and shadow-first rollouts. Built with Claude under my direction. It started with a 10-day paper-trading trial before going live at one-tenth size.</p>
-<p><strong>Stack:</strong> Python, SQLite, systemd, cron, Kraken API, Anthropic API.</p>
+<details><summary>Stack</summary><p>Python, SQLite, systemd, cron, Kraken API, Anthropic API.</p></details>
 <p><strong>A real problem it solved:</strong> Repeated false high-risk alerts came from failed price reads being counted as zero. I added a retry and a last-good-value guard, backed by 12 new tests.</p></article>
 </div></section>
 <!-- /block -->
@@ -75,13 +75,13 @@
 <p><a class="btn ghost" href="case-hil-tabula-friends-edition.html">Read more →</a></p></article>
 <article class="card"><img src="assets/img/epochron-diagram.webp" width="1020" height="1151" loading="lazy" alt=""><h3>Epochron</h3>
 <p>Android calendar with weather, tides and sky events — one network door, closed until you turn weather on.</p>
-<p><a class="btn ghost" href="case-epochron.html">Read more →</a></p></article>
-<article class="card"><img src="assets/img/omnibus-diagram.webp" width="1020" height="1103" loading="lazy" alt=""><h3>Omnibus</h3>
+<p><a class="btn ghost" href="case-epochron.html">Read more →</a></p></article></div>
+<details class="more"><summary>Show all 5 apps</summary><div class="grid"><article class="card"><img src="assets/img/omnibus-diagram.webp" width="1020" height="1103" loading="lazy" alt=""><h3>Omnibus</h3>
 <p>Audiobook player with its own sync server, overnight transcription and spoiler-safe story help. 133/133 phone tests.</p>
 <p><a class="btn ghost" href="case-omnibus.html">Read more →</a></p></article>
 <article class="card"><img src="assets/img/ladder-diagram.webp" width="1020" height="1270" loading="lazy" alt=""><h3>App Ladder</h3>
 <p>Health light, file drop, shared lists and push notifications — each built for Linux, Windows and Android.</p>
-<p><a class="btn ghost" href="case-app-ladder.html">Read more →</a></p></article></div></section>
+<p><a class="btn ghost" href="case-app-ladder.html">Read more →</a></p></article></div></details></section>
 <!-- /block -->
 
 <!-- block:troubleshoot -->
