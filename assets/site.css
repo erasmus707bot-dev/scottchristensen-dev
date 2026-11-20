@@ -40,3 +40,7 @@ section[id]{scroll-margin-top:4.5rem}
 @media (max-width:40rem){.card>img,.card figure img{max-height:7.5rem}}
 .card details{margin:.3rem 0;border-top:1px solid var(--line)}
 .card summary{cursor:pointer;min-height:44px;display:flex;align-items:center;color:var(--accent);font-weight:600}
+/* part 3: 'Show all' fold under a grid */
+details.more{margin-top:1rem}
+details.more>summary{cursor:pointer;display:inline-flex;align-items:center;min-height:44px;padding:0 1rem;border:1px solid var(--line);border-radius:10px;background:var(--panel);color:var(--text);font-weight:600}
+details.more[open]>summary{margin-bottom:1rem}
