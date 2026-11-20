@@ -46,11 +46,15 @@
 
 <p><strong>What it does:</strong> A self-hosted platform of AI-assisted tools — website, image and app-building studios, a phone companion app and a job-search hub — running on my own Linux server. Built with Claude under my direction.</p>
 <p><strong>Stack:</strong> Python, JavaScript, Linux Mint, systemd, Docker, git, HashiCorp Vault, a private network, Android (Capacitor).</p>
-<p><strong>A real problem it solved:</strong> A scanner silently showed zero results during a live phone test. I traced it to a duplicated function name and confirmed 81 results after the fix.</p></article>
-<article class="card"><h3>SonoVault</h3>
-<p><strong>What it does:</strong> A study platform for certification exams: multi-subject course packs, spaced-repetition review (FSRS), an instructor review queue and encrypted content storage. Built with Claude under my direction.</p>
-<p><strong>Stack:</strong> Next.js, TypeScript, PostgreSQL, systemd, git.</p>
-<p><strong>A real problem it solved:</strong> I traced a live outage to a test build written into the production folder while the health check stayed green, restored service, and approved two guards: separate test-build folders and a health check that verifies the build.</p></article>
+<p><strong>A real problem it solved:</strong> A scanner silently showed zero results during a live phone test. I traced it to a duplicated function name and confirmed 81 results after the fix.</p><p><strong>Built on Hermes:</strong> <a href="case-iris.html">Iris</a> · <a href="case-hil-tabula-friends-edition.html">HIL + Tabula</a> · <a href="case-epochron.html">Epochron</a> · <a href="case-omnibus.html">Omnibus</a> · <a href="case-app-ladder.html">App Ladder</a></p>
+</article>
+<article class="card"><h3>ProReady</h3>
+<figure><img src="assets/img/proready-diagram.webp" width="1020" height="1283" loading="lazy" alt="Diagram: the ProReady CompTIA A+ course — 9 exam domains of captioned video lessons, 28 diagrams and 24 games, Next up picks the next step, spaced-repetition review, then two timed 90-question mock exams."></figure>
+<p><strong>What it does:</strong> A study platform for certification exams (formerly SonoVault): multi-subject course packs, spaced-repetition review (FSRS), an instructor review queue and encrypted content storage. Built with Claude under my direction.</p>
+<p><strong>Inside it:</strong> a full CompTIA A+ course — all 9 exam domains, two timed 90-question mock exams, 28 diagrams and 24 study games.</p>
+<p><strong>Stack:</strong> Next.js, TypeScript, PostgreSQL, Prisma, systemd, git.</p>
+<p><strong>A real problem it solved:</strong> I traced a live outage to a test build written into the production folder while the health check stayed green, restored service, and approved two guards: separate test-build folders and a health check that verifies the build.</p>
+<p><a class="btn ghost" href="case-proready.html">ProReady and the A+ course →</a></p></article>
 <article class="card"><h3>Home server</h3>
 <figure><img src="assets/img/homeserver-diagram.webp" width="1020" height="1316" loading="lazy" alt="Diagram: my phone reaches the server over HTTPS on a private network; services run under systemd, secrets in HashiCorp Vault, plus Docker, Ollama and Paperless-ngx."></figure>
 <p><strong>What it does:</strong> A Linux Mint server that runs my apps, Docker services, local AI models and document archiving. Services start on boot under systemd, secrets live in HashiCorp Vault, and my phone reaches it over HTTPS on a private network.</p>
@@ -77,10 +81,6 @@
 <p><a class="btn ghost" href="about.html">Full work history →</a></p></section>
 <!-- /block -->
 
-<!-- block:about -->
-<section><h2>About me</h2>
-<p>[EDIT] A short paragraph about you and how you work.</p></section>
-<!-- /block -->
 </main>
 <footer><p>© Scott Christensen · <a href="mailto:scott@scottchristensen.dev">scott@scottchristensen.dev</a></p><!-- hx:fsocial --><p><span class="social" aria-label="Profiles"><a href="https://github.com/erasmus707bot-dev" rel="me noopener">GitHub</a></span></p><!-- /hx:fsocial -->
 </footer>
