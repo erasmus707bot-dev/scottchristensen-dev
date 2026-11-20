@@ -29,3 +29,10 @@ h1{font-size:2rem;line-height:1.2;margin:.4rem 0}h2{font-size:1.4rem;margin:.2re
 figure{margin:0}img{max-width:100%;height:auto;border-radius:10px}figcaption{color:var(--muted);font-size:.9rem}
 footer{max-width:62rem;margin:0 auto;padding:1.5rem 1rem;color:var(--muted)}
 @media (prefers-reduced-motion:no-preference){a,.btn{transition:opacity .15s}}
+
+/* 2026-11-19 less scrolling: card pictures are previews (full diagram on each project page) */
+.card>img,.card figure img{width:100%;max-height:11rem;object-fit:cover;object-position:top;border:1px solid var(--line)}
+.jump{display:flex;flex-wrap:wrap;gap:.5rem;margin:.4rem 0 .2rem;padding:0;list-style:none}
+.jump a{display:inline-flex;align-items:center;min-height:44px;padding:0 .9rem;border:1px solid var(--line);border-radius:999px;background:var(--panel);color:var(--text);text-decoration:none}
+.links{padding-left:1.1rem}.links li{margin:.45rem 0}.links span{color:var(--muted)}
+section[id]{scroll-margin-top:4.5rem}
