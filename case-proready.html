@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>ProReady — case study</title>
-<meta name="description" content="[EDIT] One sentence: what ProReady is and the result.">
+<title>ProReady — Scott Christensen</title>
+<meta name="description" content="ProReady (formerly SonoVault): a certification study platform with a full CompTIA A+ course, study games, diagrams and mock exams.">
 <meta name="color-scheme" content="light dark">
 <link rel="stylesheet" href="assets/site.css">
 <script src="assets/site.js"></script>
@@ -34,28 +34,33 @@
 <main id="main">
 <!-- block:cs-intro -->
 <section class="hero"><h1>ProReady</h1>
-<p class="pitch">[EDIT] One line: what it is and who it is for.</p>
+<p class="pitch">A study platform for certification exams — and where I built my own CompTIA A+ course.</p>
+<p class="m">Formerly SonoVault · Built with Claude under my direction · Next.js, TypeScript, PostgreSQL, Prisma, systemd</p>
 <p><a class="btn ghost" href="projects.html">← All projects</a></p></section>
 <!-- /block -->
 
-<!-- block:cs-problem -->
-<section><h2>The problem</h2>
-<p>[EDIT] What was going wrong, and for whom.</p></section>
+<!-- block:cs-diagram -->
+<section><figure><img src="assets/img/proready-diagram.webp" width="1020" height="1283" loading="lazy" alt="Diagram: the ProReady CompTIA A+ course — 9 exam domains of captioned video lessons, 28 diagrams and 24 games, Next up picks the next step, spaced-repetition review, then two timed 90-question mock exams."></figure></section>
 <!-- /block -->
 
-<!-- block:cs-built -->
-<section><h2>What I built</h2>
-<p>[EDIT] What you made and how it works.</p></section>
+<!-- block:cs-s1 -->
+<section><h2>What it does</h2>
+<p>Multi-subject course packs, spaced-repetition review (FSRS), an instructor review queue and encrypted content storage. The project was renamed from SonoVault to ProReady.</p></section>
 <!-- /block -->
 
-<!-- block:cs-stack -->
-<section><h2>Stack</h2>
-<ul class="tags"><li>[EDIT]</li><li>[EDIT]</li><li>[EDIT]</li></ul></section>
+<!-- block:cs-s2 -->
+<section><h2>CompTIA A+ course</h2>
+<ul><li>All 9 exam domains (220-1201 and 220-1202) plus two timed 90-question mock exams.</li><li>Every generated flashcard and question was read in review; about 5–8% were tossed, each with a logged reason.</li><li>Study kit: 28 diagrams drawn in code, 24 study games and captions on lesson videos.</li><li>One-tap “Next up” picks the next lesson, its game, due cards or missed questions.</li></ul></section>
 <!-- /block -->
 
-<!-- block:cs-result -->
-<section><h2>The result</h2>
-<p>[EDIT] What changed because of it.</p></section>
+<!-- block:cs-s3 -->
+<section><h2>Real problems it solved</h2>
+<ul><li>A live outage while the health check stayed green: a test build had been written into the production folder. I restored service and approved two guards — separate test-build folders and a health check that verifies the build.</li><li>The backup restore test could pass with every course image missing. I rebuilt it to check every stored file and restore from the off-site copy.</li><li>An “Add image” button silently did nothing (a form nested inside a form) even though automated tests passed. A live click-through caught it; I fixed it and added a guard test.</li><li>On phones, every study guide scrolled sideways because a reader panel was fixed at about 815 px wide. Fixed so guides fit the screen.</li></ul></section>
+<!-- /block -->
+
+<!-- block:cs-s4 -->
+<section><h2>Keeping it current</h2>
+<p>Upgraded to Prisma 7 and Next.js 16 on a separate branch and scratch database, compared integration results before and after — the same failing set, so no regression — then shipped with a passing health check.</p></section>
 <!-- /block -->
 </main>
 <footer><p>© Scott Christensen · <a href="mailto:scott@scottchristensen.dev">scott@scottchristensen.dev</a></p><!-- hx:fsocial --><p><span class="social" aria-label="Profiles"><a href="https://github.com/erasmus707bot-dev" rel="me noopener">GitHub</a></span></p><!-- /hx:fsocial -->
