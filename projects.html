@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Projects — Scott Christensen</title>
-<meta name="description" content="Projects by Scott Christensen: Hermes, SonoVault, a home server and a personal automated trading system — what each does, its stack and a real problem it solved.">
+<meta name="description" content="Projects by Scott Christensen: Hermes and the apps built on it (Iris, HIL + Tabula, Epochron, Omnibus, App Ladder), ProReady with a CompTIA A+ course, a home server and a personal automated trading system.">
 <meta name="color-scheme" content="light dark">
 <link rel="stylesheet" href="assets/site.css">
 <script src="assets/site.js"></script>
@@ -41,11 +41,15 @@
 
 <p><strong>What it does:</strong> A self-hosted platform of AI-assisted tools — website, image and app-building studios, a phone companion app and a job-search hub — running on my own Linux server. Built with Claude under my direction. I directed 2,709 version-controlled changes since Jul 2026, each stage closed with a written handoff (403 so far) and backed by 199 automated test files.</p>
 <p><strong>Stack:</strong> Python, JavaScript, Linux Mint, systemd, Docker, git, HashiCorp Vault, a private network, Android (Capacitor).</p>
-<p><strong>A real problem it solved:</strong> A scanner silently showed zero results during a live phone test. I traced it to a duplicated function name and confirmed 81 results after the fix.</p></article>
-<article class="card"><h3>SonoVault</h3>
-<p><strong>What it does:</strong> A study platform for certification exams: multi-subject course packs, spaced-repetition review (FSRS), an instructor review queue and encrypted content storage. Built with Claude under my direction.</p>
-<p><strong>Stack:</strong> Next.js, TypeScript, PostgreSQL, systemd, git.</p>
-<p><strong>A real problem it solved:</strong> I traced a live outage to a test build written into the production folder while the health check stayed green, restored service, and approved two guards: separate test-build folders and a health check that verifies the build. I also found the backup restore test could pass with every course image missing, and rebuilt it to check every stored file and restore from the off-site copy.</p></article>
+<p><strong>A real problem it solved:</strong> A scanner silently showed zero results during a live phone test. I traced it to a duplicated function name and confirmed 81 results after the fix.</p><p><strong>Built on Hermes:</strong> <a href="case-iris.html">Iris</a> · <a href="case-hil-tabula-friends-edition.html">HIL + Tabula</a> · <a href="case-epochron.html">Epochron</a> · <a href="case-omnibus.html">Omnibus</a> · <a href="case-app-ladder.html">App Ladder</a></p>
+</article>
+<article class="card"><h3>ProReady</h3>
+<figure><img src="assets/img/proready-diagram.webp" width="1020" height="1283" loading="lazy" alt="Diagram: the ProReady CompTIA A+ course — 9 exam domains of captioned video lessons, 28 diagrams and 24 games, Next up picks the next step, spaced-repetition review, then two timed 90-question mock exams."></figure>
+<p><strong>What it does:</strong> A study platform for certification exams (formerly SonoVault): multi-subject course packs, spaced-repetition review (FSRS), an instructor review queue and encrypted content storage. Built with Claude under my direction.</p>
+<p><strong>Inside it:</strong> a full CompTIA A+ course — all 9 exam domains, two timed 90-question mock exams, 28 diagrams and 24 study games.</p>
+<p><strong>Stack:</strong> Next.js, TypeScript, PostgreSQL, Prisma, systemd, git.</p>
+<p><strong>A real problem it solved:</strong> I traced a live outage to a test build written into the production folder while the health check stayed green, restored service, and approved two guards: separate test-build folders and a health check that verifies the build. I also found the backup restore test could pass with every course image missing, and rebuilt it to check every stored file and restore from the off-site copy.</p>
+<p><a class="btn ghost" href="case-proready.html">ProReady and the A+ course →</a></p></article>
 <article class="card"><h3>Home server</h3>
 <figure><img src="assets/img/homeserver-diagram.webp" width="1020" height="1316" loading="lazy" alt="Diagram: my phone reaches the server over HTTPS on a private network; services run under systemd, secrets in HashiCorp Vault, plus Docker, Ollama and Paperless-ngx."></figure>
 <p><strong>What it does:</strong> A Linux Mint server that runs my apps, Docker services, local AI models and document archiving. Services start on boot under systemd, secrets live in HashiCorp Vault, and my phone reaches it over HTTPS on a private network.</p>
@@ -59,18 +63,21 @@
 <p><strong>A real problem it solved:</strong> Repeated false high-risk alerts came from failed price reads being counted as zero. I added a retry and a last-good-value guard, backed by 12 new tests.</p></article>
 </div></section>
 <!-- /block -->
-<!-- block:smaller-projects -->
-<section id="smaller-projects"><h2>Smaller projects</h2>
-<p>Well-built smaller apps, each with its own release and testing routine.</p>
-<div class="grid"><article class="card"><img src="assets/img/omnibus-diagram.webp" width="1020" height="1103" loading="lazy" alt=""><h3>Omnibus</h3>
-<p>Audiobook player with its own sync server, overnight transcription and spoiler-safe story help. 133/133 phone tests.</p>
-<p><a class="btn ghost" href="case-omnibus.html">Read more →</a></p></article>
+<!-- block:built-on-hermes -->
+<section id="built-on-hermes"><h2>Built on Hermes</h2>
+<p>Apps I designed and built through Hermes’ studios, each with its own release and testing routine.</p>
+<div class="grid"><article class="card"><img src="assets/img/iris-diagram.webp" width="1020" height="1095" loading="lazy" alt=""><h3>Iris</h3>
+<p>Phone companion app — voice notes, photos, GPS trips and screen recording, saved only when the server’s receipt matches.</p>
+<p><a class="btn ghost" href="case-iris.html">Read more →</a></p></article>
+<article class="card"><img src="assets/img/friends-diagram.webp" width="1020" height="1085" loading="lazy" alt=""><h3>HIL + Tabula</h3>
+<p>Screenshot and recording bar plus a project notepad. The Friends Edition ships Windows and Linux installers — every Windows build VM-tested first.</p>
+<p><a class="btn ghost" href="case-hil-tabula-friends-edition.html">Read more →</a></p></article>
 <article class="card"><img src="assets/img/epochron-diagram.webp" width="1020" height="1151" loading="lazy" alt=""><h3>Epochron</h3>
 <p>Android calendar with weather, tides and sky events — one network door, closed until you turn weather on.</p>
 <p><a class="btn ghost" href="case-epochron.html">Read more →</a></p></article>
-<article class="card"><img src="assets/img/friends-diagram.webp" width="1020" height="1085" loading="lazy" alt=""><h3>HIL + Tabula Friends Edition</h3>
-<p>Offline screenshot bar and project notepad with Windows and Linux installers — every Windows build VM-tested first.</p>
-<p><a class="btn ghost" href="case-hil-tabula-friends-edition.html">Read more →</a></p></article>
+<article class="card"><img src="assets/img/omnibus-diagram.webp" width="1020" height="1103" loading="lazy" alt=""><h3>Omnibus</h3>
+<p>Audiobook player with its own sync server, overnight transcription and spoiler-safe story help. 133/133 phone tests.</p>
+<p><a class="btn ghost" href="case-omnibus.html">Read more →</a></p></article>
 <article class="card"><img src="assets/img/ladder-diagram.webp" width="1020" height="1270" loading="lazy" alt=""><h3>App Ladder</h3>
 <p>Health light, file drop, shared lists and push notifications — each built for Linux, Windows and Android.</p>
 <p><a class="btn ghost" href="case-app-ladder.html">Read more →</a></p></article></div></section>
@@ -93,7 +100,7 @@
 <p><a class="btn ghost" href="case-zero-results-no-error.html">Read the case study →</a></p></article></div></section>
 <!-- /block -->
 <!-- block:lab-notes -->
-<section id="lab-notes"><h2>Lab notes</h2>
+<section id="lab-notes"><h2>Home server lab notes</h2>
 <p>Short Linux admin write-ups from running my own server.</p>
 <div class="grid"><article class="card"><h3>“Unit not found” doesn&#x27;t always mean “not installed”</h3>
 <p>systemd&#x27;s two managers, a stray process holding a port, and an error that pointed the wrong way.</p>
@@ -113,16 +120,6 @@
 <article class="card"><h3>“Works on my machine” — why remote devices couldn&#x27;t reach my tools</h3>
 <p>Links that only worked on the server — fixed with a same-address allow-list and a regression test.</p>
 <p><a class="btn ghost" href="case-works-on-my-machine.html">Read more →</a></p></article></div></section>
-<!-- /block -->
-<!-- block:casestudy -->
-<section><div class="grid"><article class="card"><h3>Iris</h3>
-<p>[EDIT] One line on what this project achieved.</p>
-<p><a class="btn ghost" href="case-iris.html">Read the case study →</a></p></article></div></section>
-<!-- /block -->
-<!-- block:casestudy -->
-<section><div class="grid"><article class="card"><h3>ProReady</h3>
-<p>[EDIT] One line on what this project achieved.</p>
-<p><a class="btn ghost" href="case-proready.html">Read the case study →</a></p></article></div></section>
 <!-- /block -->
 </main>
 <footer><p>© Scott Christensen · <a href="mailto:scott@scottchristensen.dev">scott@scottchristensen.dev</a></p><!-- hx:fsocial --><p><span class="social" aria-label="Profiles"><a href="https://github.com/erasmus707bot-dev" rel="me noopener">GitHub</a></span></p><!-- /hx:fsocial -->
