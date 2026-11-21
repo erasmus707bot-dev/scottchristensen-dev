@@ -1,0 +1,399 @@
+{
+ "$schema": "https://raw.githubusercontent.com/jsonresume/resume-schema/v1.0.0/schema.json",
+ "basics": {
+  "name": "Scott Christensen",
+  "label": "IT support technician — CompTIA A+ in progress",
+  "email": "scott@scottchristensen.dev",
+  "summary": "IT support technician with hands-on computer repair experience since 2010, utility field-safety experience, and a record of building, testing and running software on a self-managed Linux server. A problem solver who documents every fix so it is solved once. Currently studying for CompTIA A+.",
+  "location": {
+   "x-text": "Fortuna, CA — open to relocation",
+   "city": "Fortuna",
+   "region": "CA — open to relocation"
+  }
+ },
+ "work": [
+  {
+   "name": "Self-employed",
+   "position": "Independent Software Builder (self-directed)",
+   "location": "Fortuna, CA",
+   "highlights": [
+    "Designed, specified and directed an AI-assisted study platform (Next.js, TypeScript, PostgreSQL) through 300+ version-controlled changes, built in staged checkpoints with written handoffs.",
+    "Ran it on a self-managed Linux server with systemd, automated test gates before every push, and a decisions log recording each change and incident.",
+    "Oversaw a production incident to closure: a broken live build was traced and fixed, and I chose two guards so it can't recur.",
+    "Hardened backups: rebuilt the restore drill to verify every stored file, not just database row counts."
+   ],
+   "startDate": "2026-04",
+   "x-start": "Apr 2026",
+   "x-end": "Present"
+  },
+  {
+   "name": "We Care For You Transportation",
+   "position": "NEMT Driver",
+   "location": "Humboldt County, CA (some trips outside the county)",
+   "highlights": [
+    "Transport patients to medical appointments on daily schedules.",
+    "Worked this role alongside the PG&E crew job, 7 days a week.",
+    "Cover most of Humboldt County, driving over 250 miles a day.",
+    "Run about 8 patient trips a week, on the same routes for four years.",
+    "No major complaints in four years."
+   ],
+   "startDate": "2022",
+   "x-start": "2022",
+   "x-end": "Present"
+  },
+  {
+   "name": "Nate's Tree Service",
+   "position": "Utility Vegetation Crew Member (PG&E contractor)",
+   "location": "Humboldt County, CA (traveling crew, some work outside the county)",
+   "highlights": [
+    "Safety spotter for tree-trimming crews on PG&E vegetation-management work.",
+    "Inspected equipment on crews subject to PG&E field audits and roadside equipment checks.",
+    "Performed fire-prevention vegetation management in steep, hot, remote Humboldt County terrain.",
+    "Cleared vegetation around PG&E power poles and inspected the poles."
+   ],
+   "startDate": "2025-05",
+   "endDate": "2026-03",
+   "x-start": "May 2025",
+   "x-end": "Mar 2026"
+  },
+  {
+   "name": "Licensed cannabis farms",
+   "position": "Cultivation and Staff Manager",
+   "location": "Humboldt County, CA",
+   "highlights": [
+    "Worked cultivation across multiple licensed farms and managed about 18 people."
+   ],
+   "startDate": "2016",
+   "endDate": "2019",
+   "x-start": "2016",
+   "x-end": "2019"
+  },
+  {
+   "name": "Redwood Strength",
+   "position": "Owner and Coach",
+   "location": "Fortuna, CA",
+   "highlights": [
+    "Owned and ran my own strength and conditioning gym and handled everything: clients, scheduling, equipment and the business.",
+    "Coached a youth Olympic weightlifting team.",
+    "Ran strength and conditioning for firefighter readiness.",
+    "Led group classes in kettlebell and Olympic weightlifting.",
+    "Hosted local kids at the gym for free as a safe place after school."
+   ],
+   "startDate": "2014",
+   "endDate": "2018",
+   "x-start": "2014",
+   "x-end": "2018"
+  },
+  {
+   "name": "Shaw Computer Support and Services",
+   "position": "Computer Technician",
+   "location": "Fortuna, CA",
+   "highlights": [
+    "Repaired, built and sold computers and made house calls for customers in a three-person shop.",
+    "Worked on about eight computers at a time in a shared lab that held about 25 machines.",
+    "Handled new problems as they came up, including newly released viruses, and found fixes for them.",
+    "Around 2012–2013, recovered a customer's business data from a ransomware-locked computer: after two weeks of testing, found an antivirus tool that could boot from a USB drive and get past the lock, pulled all of his data, wiped the machine and restored everything. The customer got all of his data back."
+   ],
+   "startDate": "2010",
+   "endDate": "2015",
+   "x-start": "2010",
+   "x-end": "2015"
+  },
+  {
+   "name": "Health Sport",
+   "position": "Personal Trainer and Group Coach",
+   "location": "Fortuna, CA",
+   "highlights": [
+    "Trained clients one on one and coached group classes."
+   ],
+   "startDate": "2010",
+   "endDate": "2014",
+   "x-start": "2010",
+   "x-end": "2014"
+  },
+  {
+   "name": "Ray's Food Place",
+   "position": "Bakery and Deli Worker",
+   "location": "Fortuna, CA",
+   "highlights": [
+    "Worked in the bakery and deli."
+   ],
+   "startDate": "2006",
+   "endDate": "2010",
+   "x-start": "2006",
+   "x-end": "2010"
+  },
+  {
+   "name": "Local schools",
+   "position": "Volunteer PE Instructor",
+   "location": "Humboldt County, CA (Ferndale and Fortuna area)",
+   "highlights": [
+    "Offered to help with PE classes at local schools, and schools took me up on it; taught kids how to move."
+   ]
+  }
+ ],
+ "projects": [
+  {
+   "name": "ProReady",
+   "description": "Study platform for certification exams (formerly SonoVault) — multi-subject course packs, spaced-repetition review (FSRS), instructor review queue, encrypted content storage, and a full CompTIA A+ course. Built with Claude under my direction.",
+   "keywords": [
+    "Next.js",
+    "TypeScript",
+    "PostgreSQL",
+    "Prisma",
+    "systemd",
+    "git"
+   ],
+   "highlights": [
+    "Traced a live outage to a test build written into the production folder while the health check stayed green; restored service and approved two guards: separate test-build folders and a health check that verifies the build.",
+    "Found the backup restore test could pass with every course image missing; rebuilt it to check every stored file's existence and size, and to restore from the off-site copy.",
+    "Caught an \"Add image\" button that silently did nothing (a form nested inside a form) through a live click-through after automated tests had passed; fixed it and added a guard test.",
+    "Built a CompTIA A+ course covering all 9 exam domains (220-1201 and 220-1202) plus two timed 90-question mock exams; every generated flashcard and question was read in review and about 5–8% were tossed with a logged reason.",
+    "Added an A+ study kit: 28 diagrams drawn in code, 24 study games, captions on lesson videos, and a one-tap \"Next up\" that picks the next lesson, its game, due cards or missed questions.",
+    "Upgraded to Prisma 7 and Next.js 16 on a separate branch and scratch database, compared integration results before and after (same failing set, no regression), then shipped with a passing health check.",
+    "Fixed a phone layout where every study guide scrolled sideways (a reader panel fixed at about 815 px)."
+   ]
+  },
+  {
+   "name": "Home server (gandalf)",
+   "description": "Linux Mint server running my apps, Docker services, local AI models and document archiving.",
+   "keywords": [
+    "Linux Mint",
+    "Docker",
+    "systemd",
+    "Ollama",
+    "Paperless-ngx"
+   ],
+   "highlights": [
+    "Runs services under both systemd's system manager and per-user manager; documented which service lives under which.",
+    "Replaced a hand-started dashboard process with a systemd user service that starts on boot; found a stray process holding the port and systemd's restart limit masking it.",
+    "Serves local services to my phone over HTTPS on a private network (Tailscale) with a real certificate for the server's private name — no IP baked into the phone app.",
+    "Added a connectivity watchdog that health-checks local services behind the HTTPS front; services survive reboot.",
+    "Moved an image service from Docker to a host systemd service because Docker's port forwarding hid localhost requests; kept a signed-token sign-in for remote use.",
+    "Keeps all AI provider API keys in HashiCorp Vault — apps read from Vault with no plain-text fallback, keys can be rotated from a settings screen and are never shown back; Vault unseals automatically at boot via systemd.",
+    "Diagnosed a DNS failure where the server couldn't resolve its own private-network name because of a hand-managed resolver file kept from a VPN fix; chose the safe fix and documented it."
+   ]
+  },
+  {
+   "name": "Hermes",
+   "description": "Self-hosted platform of AI-assisted tools (website, image and app-building studios, a phone companion app, a job-search hub) running on my own Linux server. Built with Claude under my direction.",
+   "keywords": [
+    "Python",
+    "JavaScript",
+    "Linux Mint",
+    "systemd",
+    "Docker",
+    "git",
+    "HashiCorp Vault",
+    "Tailscale",
+    "Android (Capacitor)"
+   ],
+   "highlights": [
+    "Directed 2,709 version-controlled changes since Jul 2026, each stage closed with a written handoff (403 so far) and backed by 199 automated test files.",
+    "Caught a scanner that silently showed zero results during a live phone test; traced it to a duplicated function name and confirmed 81 results after the fix.",
+    "Reviewed 17 security-scan alerts, confirmed every one was harmless test data, and kept the check at full strength instead of weakening it.",
+    "Handled a \"loads and nothing happens\" report: found the tool worked but gave no feedback, and added visible results and per-source counts.",
+    "Triaged 5 failing tests: fixed 4, confirmed 2 were intended changes before updating them, and found a real access bug where partners couldn't load the scripts their pages need.",
+    "Cut wrong matches in an image finder from 13 of 15 to 0 of 30 after finding it mistook wiki pages for image files.",
+    "Fixed remote devices failing to reach dashboard tools (links built as host + port only worked on the server); served the tools from the same address via a fixed allow-list, added a regression test, verified live."
+   ]
+  },
+  {
+   "name": "Automated trading system (personal)",
+   "description": "Self-hosted system that monitors and manages my brokerage and crypto accounts with daily caps, kill switches and shadow-first rollouts. Built with Claude under my direction.",
+   "keywords": [
+    "Python",
+    "SQLite",
+    "systemd",
+    "cron",
+    "Kraken API",
+    "Anthropic API"
+   ],
+   "highlights": [
+    "Directed 2,278 version-controlled changes since Apr 2026, starting with a 10-day paper-trading trial before going live at one-tenth size.",
+    "Traced repeated false high-risk alerts to failed price reads being counted as zero; added a retry and a last-good-value guard, backed by 12 new tests.",
+    "Found a control panel that showed safety switches as OFF while they were running; corrected the display so the screen matches what the system does.",
+    "Found a monitoring alert that could never turn red after an upgrade, and fixed what it compared against."
+   ]
+  },
+  {
+   "name": "Omnibus",
+   "description": "Android audiobook player (Kotlin) with a Python + SQLite sync server on my home server — per-device tokens, private-network only, nightly backups kept 14 days; overnight transcription for read-along and spoiler-safe story help with a local AI model. Built with Claude under my direction.",
+   "keywords": [
+    "Kotlin",
+    "Android",
+    "Python",
+    "SQLite",
+    "systemd",
+    "Ollama"
+   ],
+   "highlights": [
+    "Fixed garbled character names with a per-book name list (904 lines corrected).",
+    "Story answers prepared ahead by a systemd timer so the phone gets them with zero AI calls.",
+    "Phone core tests 133/133."
+   ]
+  },
+  {
+   "name": "Epochron",
+   "description": "Android calendar (Kotlin/Compose) with labels, sky events, weather and tides (NWS/NOAA), a trip card and tasks; one network door closed until weather is turned on; city-level location only. Built with Claude under my direction.",
+   "keywords": [
+    "Kotlin",
+    "Jetpack Compose",
+    "Android"
+   ],
+   "highlights": [
+    "Release-candidate process: emulator, then real phone, against a 13-point checklist before 1.0; releases ship with checksums, notes and a friend guide.",
+    "Version 0.6.0 passed 54/54 tests."
+   ]
+  },
+  {
+   "name": "HIL + Tabula Friends Edition",
+   "description": "Offline screenshot/recording bar and project notepad packaged as a Windows installer and a Linux .deb. Built with Claude under my direction.",
+   "keywords": [
+    "Python",
+    "Windows installer",
+    "Debian packaging",
+    "ffmpeg"
+   ],
+   "highlights": [
+    "After 1.0.0 showed nothing on Windows, made VM testing mandatory before release; 1.0.1 passed the VM test and shipped."
+   ]
+  },
+  {
+   "name": "App Ladder",
+   "description": "Small utilities built for Linux, Windows and Android — Pulse (server health light), Drop (file send with revocable per-device tokens), Tally (shared lists on one shared sync service), Bell (push notifications without Google, in progress). Built with Claude under my direction.",
+   "keywords": [
+    "Linux",
+    "Windows",
+    "Android"
+   ]
+  },
+  {
+   "name": "Iris",
+   "description": "Android companion app (Capacitor) for my home server — voice notes, photos, GPS trip logging with mileage CSV export, and phone screen recording — connected over HTTPS on a private network. Built with Claude under my direction.",
+   "keywords": [
+    "JavaScript",
+    "Capacitor",
+    "Android (Java)",
+    "Python",
+    "Whisper"
+   ],
+   "highlights": [
+    "A capture only counts as saved when the server's SHA-256 receipt matches the phone's copy; failed sends retry with backoff and are flagged as stuck, never dropped.",
+    "Traced updates that \"still looked old\" on my phone to the build script installing to the test emulator instead of the real phone; changed it to install only to a real device.",
+    "Found why the background GPS switch kept turning itself off while tracking kept running: a plugin call returned an ID instead of the expected Promise, and every tap added another location watcher; fixed the cause."
+   ]
+  }
+ ],
+ "skills": [
+  {
+   "name": "IT and systems",
+   "keywords": [
+    "Linux (Mint) administration",
+    "systemd services",
+    "Docker",
+    "PostgreSQL",
+    "backups and restore testing",
+    "git version control",
+    "troubleshooting"
+   ]
+  },
+  {
+   "name": "CompTIA A+ study (in progress)",
+   "keywords": [
+    "hardware",
+    "networking",
+    "Windows",
+    "security"
+   ]
+  },
+  {
+   "name": "Software delivery",
+   "keywords": [
+    "AI-assisted development (Claude)",
+    "staged builds",
+    "automated test gates",
+    "written change logs and incident notes"
+   ]
+  },
+  {
+   "name": "Field and safety",
+   "keywords": [
+    "safety spotting",
+    "equipment inspection",
+    "fire prevention",
+    "working under utility (PG&E) audit"
+   ]
+  },
+  {
+   "name": "People",
+   "keywords": [
+    "clear written documentation",
+    "customer service with patients and the public"
+   ]
+  },
+  {
+   "name": "Help desk and repair",
+   "keywords": [
+    "Computer repair",
+    "Computer builds",
+    "Virus and malware removal",
+    "Printer troubleshooting",
+    "Software recommendations",
+    "House calls",
+    "Ransomware recovery"
+   ]
+  },
+  {
+   "name": "People and leadership",
+   "keywords": [
+    "Staff management (about 18 people)",
+    "Youth coaching",
+    "Customer service"
+   ]
+  }
+ ],
+ "certificates": [
+  {
+   "name": "CompTIA A+ (220-1201 / 220-1202)",
+   "issuer": "CompTIA",
+   "x-status": "in progress"
+  },
+  {
+   "name": "Class C Driver's License",
+   "x-status": "current"
+  },
+  {
+   "name": "First Aid and CPR",
+   "x-status": "current (online course, renewed every two to three years)"
+  }
+ ],
+ "education": [
+  {
+   "institution": "Ferndale High School",
+   "studyType": "High school diploma",
+   "courses": [
+    "Ferndale, California; graduated 2007."
+   ],
+   "endDate": "2007",
+   "x-end": "2007"
+  },
+  {
+   "institution": "College of the Redwoods",
+   "area": "Anatomy, physiology and strength and conditioning",
+   "studyType": "Coursework",
+   "courses": [
+    "Took classes while working."
+   ],
+   "startDate": "2007",
+   "endDate": "2009",
+   "x-start": "2007",
+   "x-end": "2009"
+  }
+ ],
+ "meta": {
+  "version": "v1.0.0",
+  "canonical": "Hermes Career Command master record",
+  "x-generator": "hermes career_writer"
+ }
+}

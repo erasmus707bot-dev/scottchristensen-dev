@@ -1,0 +1,60 @@
+# Scott Christensen
+
+> IT support technician — CompTIA A+ in progress
+
+IT support technician with hands-on computer repair experience since 2010, utility field-safety experience, and a record of building, testing and running software on a self-managed Linux server. A problem solver who documents every fix so it is solved once. Currently studying for CompTIA A+.
+
+Location: Fortuna, CA — open to relocation
+Contact: scott@scottchristensen.dev
+
+## Resume
+- [resume.json](https://scottchristensen.dev/resume.json): full resume as JSON Resume (kept in step with the Master record)
+
+## Work
+- Independent Software Builder (self-directed) — Self-employed (Apr 2026–Present)
+- Utility Vegetation Crew Member (PG&E contractor) — Nate's Tree Service (May 2025–Mar 2026)
+- NEMT Driver — We Care For You Transportation (2022–Present)
+- Cultivation and Staff Manager — Licensed cannabis farms (2016–2019)
+- Owner and Coach — Redwood Strength (2014–2018)
+- Personal Trainer and Group Coach — Health Sport (2010–2014)
+- Computer Technician — Shaw Computer Support and Services (2010–2015)
+- Bakery and Deli Worker — Ray's Food Place (2006–2010)
+- Volunteer PE Instructor — Local schools (–present)
+
+## Projects
+- ProReady: Study platform for certification exams (formerly SonoVault) — multi-subject course packs, spaced-repetition review (FSRS), instructor review queue, encrypted content storage, and a full CompTIA A+ course. Built with Claude under my direction.
+- Home server (gandalf): Linux Mint server running my apps, Docker services, local AI models and document archiving.
+- Hermes: Self-hosted platform of AI-assisted tools (website, image and app-building studios, a phone companion app, a job-search hub) running on my own Linux server. Built with Claude under my direction.
+- Automated trading system (personal): Self-hosted system that monitors and manages my brokerage and crypto accounts with daily caps, kill switches and shadow-first rollouts. Built with Claude under my direction.
+- Omnibus: Android audiobook player (Kotlin) with a Python + SQLite sync server on my home server — per-device tokens, private-network only, nightly backups kept 14 days; overnight transcription for read-along and spoiler-safe story help with a local AI model. Built with Claude under my direction.
+- Epochron: Android calendar (Kotlin/Compose) with labels, sky events, weather and tides (NWS/NOAA), a trip card and tasks; one network door closed until weather is turned on; city-level location only. Built with Claude under my direction.
+- HIL + Tabula Friends Edition: Offline screenshot/recording bar and project notepad packaged as a Windows installer and a Linux .deb. Built with Claude under my direction.
+- App Ladder: Small utilities built for Linux, Windows and Android — Pulse (server health light), Drop (file send with revocable per-device tokens), Tally (shared lists on one shared sync service), Bell (push notifications without Google, in progress). Built with Claude under my direction.
+- Iris: Android companion app (Capacitor) for my home server — voice notes, photos, GPS trip logging with mileage CSV export, and phone screen recording — connected over HTTPS on a private network. Built with Claude under my direction.
+
+## Certifications
+- CompTIA A+ (220-1201 / 220-1202) — in progress
+- Class C Driver's License — current
+- First Aid and CPR — current (online course, renewed every two to three years)
+
+## Pages
+- [about](https://scottchristensen.dev/about.html)
+- [case app ladder](https://scottchristensen.dev/case-app-ladder.html)
+- [case docker and localhost](https://scottchristensen.dev/case-docker-and-localhost.html)
+- [case epochron](https://scottchristensen.dev/case-epochron.html)
+- [case hil tabula friends edition](https://scottchristensen.dev/case-hil-tabula-friends-edition.html)
+- [case iris](https://scottchristensen.dev/case-iris.html)
+- [case keeping api keys out of plain text](https://scottchristensen.dev/case-keeping-api-keys-out-of-plain-text.html)
+- [case omnibus](https://scottchristensen.dev/case-omnibus.html)
+- [case proready](https://scottchristensen.dev/case-proready.html)
+- [case real https from phone to server](https://scottchristensen.dev/case-real-https-from-phone-to-server.html)
+- [case the green health check that lied](https://scottchristensen.dev/case-the-green-health-check-that-lied.html)
+- [case the server that couldn t find itself](https://scottchristensen.dev/case-the-server-that-couldn-t-find-itself.html)
+- [case the tests passed the button didn t](https://scottchristensen.dev/case-the-tests-passed-the-button-didn-t.html)
+- [case unit not found](https://scottchristensen.dev/case-unit-not-found.html)
+- [case when zero isn t zero](https://scottchristensen.dev/case-when-zero-isn-t-zero.html)
+- [case works on my machine](https://scottchristensen.dev/case-works-on-my-machine.html)
+- [case zero results no error](https://scottchristensen.dev/case-zero-results-no-error.html)
+- [contact](https://scottchristensen.dev/contact.html)
+- [index](https://scottchristensen.dev/)
+- [projects](https://scottchristensen.dev/projects.html)
