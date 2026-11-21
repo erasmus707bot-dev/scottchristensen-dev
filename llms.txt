@@ -23,7 +23,7 @@ Contact: scott@scottchristensen.dev
 
 ## Projects
 - ProReady: Study platform for certification exams (formerly SonoVault) — multi-subject course packs, spaced-repetition review (FSRS), instructor review queue, encrypted content storage, and a full CompTIA A+ course. Built with Claude under my direction.
-- Home server (gandalf): Linux Mint server running my apps, Docker services, local AI models and document archiving.
+- Home server: Linux Mint server running my apps, Docker services, local AI models and document archiving.
 - Hermes: Self-hosted platform of AI-assisted tools (website, image and app-building studios, a phone companion app, a job-search hub) running on my own Linux server. Built with Claude under my direction.
 - Automated trading system (personal): Self-hosted system that monitors and manages my brokerage and crypto accounts with daily caps, kill switches and shadow-first rollouts. Built with Claude under my direction.
 - Omnibus: Android audiobook player (Kotlin) with a Python + SQLite sync server on my home server — per-device tokens, private-network only, nightly backups kept 14 days; overnight transcription for read-along and spoiler-safe story help with a local AI model. Built with Claude under my direction.

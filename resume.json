@@ -155,7 +155,7 @@
    ]
   },
   {
-   "name": "Home server (gandalf)",
+   "name": "Home server",
    "description": "Linux Mint server running my apps, Docker services, local AI models and document archiving.",
    "keywords": [
     "Linux Mint",
@@ -167,7 +167,7 @@
    "highlights": [
     "Runs services under both systemd's system manager and per-user manager; documented which service lives under which.",
     "Replaced a hand-started dashboard process with a systemd user service that starts on boot; found a stray process holding the port and systemd's restart limit masking it.",
-    "Serves local services to my phone over HTTPS on a private network (Tailscale) with a real certificate for the server's private name — no IP baked into the phone app.",
+    "Serves local services to my phone over HTTPS on a private network with a real certificate for the server's private name — no IP baked into the phone app.",
     "Added a connectivity watchdog that health-checks local services behind the HTTPS front; services survive reboot.",
     "Moved an image service from Docker to a host systemd service because Docker's port forwarding hid localhost requests; kept a signed-token sign-in for remote use.",
     "Keeps all AI provider API keys in HashiCorp Vault — apps read from Vault with no plain-text fallback, keys can be rotated from a settings screen and are never shown back; Vault unseals automatically at boot via systemd.",
@@ -185,7 +185,6 @@
     "Docker",
     "git",
     "HashiCorp Vault",
-    "Tailscale",
     "Android (Capacitor)"
    ],
    "highlights": [
